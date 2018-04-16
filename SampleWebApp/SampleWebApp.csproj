@@ -5,12 +5,16 @@
     <RuntimeIdentifiers>linux-x64,win8-x64,win8-x86,win81-x64,win81-x86,win10-x64,win10-x86</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.15.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="../README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Update="manifest.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
