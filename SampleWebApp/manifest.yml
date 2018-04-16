@@ -1,0 +1,4 @@
+﻿---
+applications:
+- name: sample-asp-net-core
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack.git
