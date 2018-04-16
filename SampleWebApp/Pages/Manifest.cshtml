@@ -1,7 +1,21 @@
 ﻿@page
 @model ManifestModel
 @{
-    ViewData["Title"] = "Manifest File";
+    ViewData["Title"] = "Cloud Foundry Manifest File";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
+<h1>@ViewData["Title"]</h1>
+
+<div class="card">
+    <div class="card-header">Required Attributes</div>
+    <div class="card-body">@Html.Raw(@Model.RequiredAttributes)</div>
+</div>
+
+<div>
+    <h2>Optional Attributes</h2>
+    @Html.Raw(@Model.OptionalAttributes)
+</div>
+
+<div>
+    <h2>Resources</h2>
+    @Html.Raw(@Model.Resources)
+</div>
