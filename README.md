@@ -2,9 +2,9 @@
 
 This solution contains a sample [ASP.NET](https://www.asp.net) core application that can run on [Cloud Foundry](https://www.cloudfoundry.org/) installations.
 
-## Deployment
-
-### Setting up Cloud Foundry
+### Deployment
+---
+##### Set up Cloud Foundry
 If you don't have access to a Cloud Foundry instance, install [PCF Dev](https://pivotal.io/pcf-dev) to deploy the application locally.
 
 1. Install the [cf CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html).
@@ -13,7 +13,7 @@ If you don't have access to a Cloud Foundry instance, install [PCF Dev](https://
 
 	`cf login [-a API_URL]`
 
-### Publish the project
+##### Publish the project
 1. Clone this repository:
 
 	`git clone https://github.com/skmichaelson/dotnet-core-2-for-cf.git`
@@ -26,7 +26,7 @@ If you don't have access to a Cloud Foundry instance, install [PCF Dev](https://
 
 	`dotnet publish -c Release -o ./publish -r linux-x64`
 
-### Final steps
+##### Final steps
 1. Open the directory with your published files:
 
 	`cd publish`
@@ -35,7 +35,8 @@ If you don't have access to a Cloud Foundry instance, install [PCF Dev](https://
 
 	`cf push`
 
-## Contributing
+### Contributing
+---
 1. Fork the repository
 1. Submit a pull request
 
