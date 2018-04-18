@@ -1,0 +1,1 @@
+﻿- [Official documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore2x)

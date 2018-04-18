@@ -1,0 +1,1 @@
+﻿To ensure your application is compiled correctly for a Linux OS, you need to `dotnet publish` it before deploying to Cloud Foundry.
