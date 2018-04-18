@@ -1,6 +1,5 @@
-﻿using Markdig;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.IO;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using static SampleWebApp.Pages.Helpers;
 
 namespace SampleWebApp.Pages
 {
@@ -12,33 +11,15 @@ namespace SampleWebApp.Pages
 
         public void OnGet()
         {
-            OptionalAttributes = Markdown.ToHtml(GetOptionalAttributes());
-            RequiredAttributes = Markdown.ToHtml(GetRequiredAttributes());
-            Resources = Markdown.ToHtml(GetResources());
+            OptionalAttributes = GetHtml("OptionalAttributes");
+            RequiredAttributes = GetHtml("RequiredAttributes");
+            Resources = GetHtml("Resources");
         }
 
-        private string GetOptionalAttributes()
+        private string GetHtml(string filename)
         {
-            using (StreamReader sr = new StreamReader("./Pages/Manifest/OptionalAttributes.md"))
-            {
-                return sr.ReadToEnd();
-            }
-        }
-
-        private string GetRequiredAttributes()
-        {
-            using (StreamReader sr = new StreamReader("./Pages/Manifest/RequiredAttributes.md"))
-            {
-                return sr.ReadToEnd();
-            }
-        }
-
-        private string GetResources()
-        {
-            using (StreamReader sr = new StreamReader("./Pages/Manifest/Resources.md"))
-            {
-                return sr.ReadToEnd();
-            }
+            string path = MarkdownPath("Manifest", filename);
+            return ParseMarkdownFile(path);
         }
     }
 }
