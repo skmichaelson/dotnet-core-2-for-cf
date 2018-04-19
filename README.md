@@ -2,8 +2,8 @@
 
 This solution contains a sample [ASP.NET](https://www.asp.net) core application that can run on [Cloud Foundry](https://www.cloudfoundry.org/) installations.
 
-### Deployment
----
+## Deployment
+
 ##### Set up Cloud Foundry
 If you don't have access to a Cloud Foundry instance, install [PCF Dev](https://pivotal.io/pcf-dev) to deploy the application locally.
 
@@ -35,8 +35,8 @@ If you don't have access to a Cloud Foundry instance, install [PCF Dev](https://
 
 	`cf push`
 
-### Contributing
----
+## Contributing
+
 1. Fork the repository
 1. Submit a pull request
 
