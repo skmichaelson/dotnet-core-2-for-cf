@@ -18,9 +18,13 @@ If you don't have access to a Cloud Foundry instance, install [PCF Dev](https://
 
 	`git clone https://github.com/skmichaelson/dotnet-core-2-for-cf.git`
 
-1. Open the directory for the sample web application:
+1. Open the directory for this Git repository:
 
 	`cd dotnet-core-2-for-cf`
+
+1. Open the subdirectory for the SampleWebApp application:
+
+	`cd SampleWebApp`
 
 1. Publish the app to a known directory: 
 
