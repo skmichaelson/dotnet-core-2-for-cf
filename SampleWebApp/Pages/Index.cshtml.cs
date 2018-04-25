@@ -1,6 +1,5 @@
 ﻿using Markdig;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.IO;
 using static SampleWebApp.Helpers;
 
 namespace SampleWebApp.Pages

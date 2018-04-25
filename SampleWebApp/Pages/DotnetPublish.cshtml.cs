@@ -7,14 +7,12 @@ namespace SampleWebApp.Pages
     {
         public string Flags { get; set; }
         public string Description { get; set; }
-        public string Prerequisites { get; set; }
         public string Resources { get; set; }
 
         public void OnGet()
         {
             Description = GetHtml("Description");
             Flags = GetHtml("Flags");
-            Prerequisites = GetHtml("Prerequisites");
             Resources = GetHtml("Resources");
         }
 
