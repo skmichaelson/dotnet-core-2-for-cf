@@ -1,7 +1,7 @@
 ﻿using Markdig;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System;
 using System.IO;
+using static SampleWebApp.Helpers;
 
 namespace SampleWebApp.Pages
 {
@@ -18,19 +18,11 @@ namespace SampleWebApp.Pages
         {
             try
             {
-                using (StreamReader sr = new StreamReader("./README.md"))
-                {
-                    return sr.ReadToEnd();
-                }
-
+                return ParseMarkdownFile("./README.md");
             }
             catch
             {
-                using (StreamReader sr = new StreamReader("./../README.md"))
-                {
-                    return sr.ReadToEnd();
-                }
-
+                return ParseMarkdownFile("./../README.md");
             }
         }
     }

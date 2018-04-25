@@ -1,11 +1,12 @@
 ﻿using Markdig;
 using System.IO;
 
-namespace SampleWebApp.Pages
+namespace SampleWebApp
 {
     public class Helpers
     {
         private static string PathTemplate = "./Pages/{0}/{1}.md";
+        private static string PathTemplate2 = "./../Pages/{0}/{1}.md";
 
         public static string ParseMarkdownFile(string filename)
         {
@@ -21,7 +22,14 @@ namespace SampleWebApp.Pages
 
         public static string MarkdownPath(string dir, string filename)
         {
-            return string.Format(PathTemplate, dir, filename);
+            try
+            {
+                return string.Format(PathTemplate, dir, filename);
+            }
+            catch
+            {
+                return string.Format(PathTemplate2, dir, filename);
+            }
         }
     }
 }

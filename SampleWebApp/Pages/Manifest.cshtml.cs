@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using static SampleWebApp.Pages.Helpers;
+using static SampleWebApp.Helpers;
 
 namespace SampleWebApp.Pages
 {
